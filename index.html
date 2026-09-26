@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Laerskool Paulpietersburg Primary School | Scientia est Potestas-Knowledge
+      is power
+    </title>
+    <meta
+      name="description"
+      content="Laerskool Paulpietersburg Primary School - Scientia est Potestas-Knowledge is power. Discover our academic programs, sports teams, clubs, and more."
+    />
+    <meta
+      name="keywords"
+      content="Paulpietersburg, Primary School, Education, Rugby, Hockey, Netball, Soccer, Clubs, Activities, South Africa, Academics, Choir, Chess, Girl Guides, Scouts"
+    />
+    <meta name="author" content="Laerskool Paulpietersburg" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://www.paulpietersburgprimary.co.za/" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="favicon.ico" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://www.paulpietersburgprimary.co.za/"
+    />
+    <meta
+      property="og:title"
+      content="Laerskool Paulpietersburg Primary School"
+    />
+    <meta
+      property="og:description"
+      content="Excellence in Education, Sports, and Activities. Discover our academic programs, sports teams, clubs, and more."
+    />
+    <meta
+      property="og:image"
+      content="images/paulpietersburg emblem with no background .png"
+    />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:url"
+      content="https://www.paulpietersburgprimary.co.za/"
+    />
+    <meta
+      name="twitter:title"
+      content="Laerskool Paulpietersburg Primary School"
+    />
+    <meta
+      name="twitter:description"
+      content="Excellence in Education, Sports, and Activities. Discover our academic programs, sports teams, clubs, and more."
+    />
+    <meta
+      name="twitter:image"
+      content="images/paulpietersburg emblem with no background .png"
+    />
+    <!-- Schema.org JSON-LD -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "School",
+        "name": "Laerskool Paulpietersburg Primary School",
+        "url": "https://www.paulpietersburgprimary.co.za/",
+        "logo": "images/paulpietersburg%20emblem%20with%20no%20background%20.png",
+        "description": "Excellence in Education, Sports, and Activities. Discover our academic programs, sports teams, clubs, and more.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Paulpietersburg",
+          "addressCountry": "South Africa"
+        },
+        "sameAs": ["https://web.facebook.com/profile.php?id=100066553329942"]
+      }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  <!-- Using simple system fonts (no external Google Fonts) -->
+    <style>
+      .dropdown:hover .dropdown-menu {
+        display: block;
+      }
+      .page {
+        display: none;
+        opacity: 0;
+        transform: translateY(-40px);
+        transition: opacity 0.5s ease, transform 0.5s cubic-bezier(.4,0,.2,1);
+      }
+      .page.active {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 0.5s ease, transform 0.5s cubic-bezier(.4,0,.2,1);
+      }
+      .nav-link.active {
+        color: #ff6a00;
+        border-bottom: 2px solid #ff6a00;
+      }
+      
+      /* Gallery Styles */
+      .gallery-item {
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        background: white;
+        aspect-ratio: 1;
+      }
+      
+      .gallery-item:hover {
+        transform: translateY(-8px) scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      
+      .gallery-image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 16px;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      .gallery-item:hover .gallery-image {
+        transform: scale(1.05);
+      }
+      
+      .gallery-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(45deg, rgba(0, 31, 77, 0.8), rgba(255, 106, 0, 0.8));
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      .gallery-item:hover .gallery-overlay {
+        opacity: 1;
+      }
+      
+      .gallery-overlay i {
+        color: white;
+        font-size: 2rem;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+      }
+      
+      /* Card Hover + Fall-in (Dress Code & Staff) */
+      /* Base state: hidden and slightly above (will 'fall' into place) */
+      #dresscode .bg-blue-50.p-6.rounded-lg.shadow.text-center.flex.flex-col.items-center,
+      #staff .bg-white.rounded-lg.shadow-lg.p-6.text-center.w-64 {
+        opacity: 0;
+        transform: translateY(-24px);
+        transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease;
+        cursor: pointer;
+      }
+
+      /* Also apply fall-in to Dress Code when using gallery-item style */
+      #dresscode .gallery-item {
+        opacity: 0;
+        transform: translateY(-24px);
+        transition: opacity 0.6s ease, transform 0.6s cubic-bezier(.4,0,.2,1), box-shadow 0.3s ease;
+        cursor: pointer;
+        /* Portrait tiles to suit uniforms */
+        aspect-ratio: 2 / 3;
+        background: white;
+        max-width: 220px;
+        margin: 0 auto;
+      }
+
+      /* Active page: animate into place */
+      #dresscode.page.active .bg-blue-50.p-6.rounded-lg.shadow.text-center.flex.flex-col.items-center,
+      #staff.page.active .bg-white.rounded-lg.shadow-lg.p-6.text-center.w-64 {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      #dresscode.page.active .gallery-item {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Hover responsiveness: lift and scale with stronger shadow */
+      #dresscode .bg-blue-50.p-6.rounded-lg.shadow.text-center.flex.flex-col.items-center:hover,
+      #staff .bg-white.rounded-lg.shadow-lg.p-6.text-center.w-64:hover {
+        transform: translateY(-6px) scale(1.02);
+        box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 10px 10px -5px rgba(0,0,0,0.04);
+      }
+
+      /* Ensure Dress Code gallery images are contained and padded */
+      #dresscode .gallery-image {
+        object-fit: contain;
+        padding: 28px;
+        background: white;
+      }
+
+      /* Staggered delays for nicer cascade effect */
+      /* Dress Code grid */
+      #dresscode.page.active .grid > div:nth-child(1) { transition-delay: .05s; }
+      #dresscode.page.active .grid > div:nth-child(2) { transition-delay: .10s; }
+      #dresscode.page.active .grid > div:nth-child(3) { transition-delay: .15s; }
+      #dresscode.page.active .grid > div:nth-child(4) { transition-delay: .20s; }
+      #dresscode.page.active .grid > div:nth-child(5) { transition-delay: .25s; }
+      #dresscode.page.active .grid > div:nth-child(6) { transition-delay: .30s; }
+
+      /* Staff flex groups (applies within each flex row wrapper) */
+      #staff.page.active .flex > div:nth-child(1) { transition-delay: .05s; }
+      #staff.page.active .flex > div:nth-child(2) { transition-delay: .10s; }
+      #staff.page.active .flex > div:nth-child(3) { transition-delay: .15s; }
+      #staff.page.active .flex > div:nth-child(4) { transition-delay: .20s; }
+      #staff.page.active .flex > div:nth-child(5) { transition-delay: .25s; }
+      #staff.page.active .flex > div:nth-child(6) { transition-delay: .30s; }
+      #staff.page.active .flex > div:nth-child(7) { transition-delay: .35s; }
+      #staff.page.active .flex > div:nth-child(8) { transition-delay: .40s; }
+      
+      :root{
+        /* Revert to simple, fast-loading system font stacks */
+        --font-body: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+        --font-heading: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+      }
+
+      /* Font Sharpening and Typography Improvements */
+      * {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-rendering: optimizeLegibility;
+      }
+      body { font-family: var(--font-body); }
+      
+      /* Hero Section Typography */
+      .hero-title {
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        -webkit-text-stroke: 0.5px rgba(255, 255, 255, 0.1);
+        font-family: var(--font-heading);
+      }
+      
+      .hero-subtitle {
+        font-weight: 500;
+        letter-spacing: 0.025em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+      }
+      
+      /* Section Headings */
+      .section-title {
+        font-weight: 700;
+        letter-spacing: -0.015em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+        font-family: var(--font-heading);
+      }
+      
+      /* Body Text Improvements */
+      .body-text {
+        font-weight: 400;
+        letter-spacing: 0.01em;
+        line-height: 1.6;
+      }
+      
+      /* Button Text */
+      .button-text {
+        font-weight: 600;
+        letter-spacing: 0.025em;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      }
+      
+      /* Card Text */
+      .card-title {
+        font-weight: 600;
+        letter-spacing: -0.01em;
+        font-family: var(--font-heading);
+      }
+      
+      .card-text {
+        font-weight: 400;
+        letter-spacing: 0.005em;
+        line-height: 1.5;
+      }
+  h1, h2, h3 { font-family: var(--font-heading); font-weight: 700; }
+    </style>
+  </head>
+  <body>
+    <!-- Top Header  -->
+    <header
+      class="w-full bg-[#001f4d] py-4 px-12 flex items-center border-b border-blue-800"
+    >
+      <div class="container mx-auto flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <!-- Inline mobile menu button: same color as header, square, next to logo -->
+          <button
+            id="mobileMenuBtn"
+            aria-label="Open menu"
+            type="button"
+            class="md:hidden w-12 h-12 bg-[#001f4d] text-white rounded-none border border-blue-800 flex items-center justify-center"
+          >
+            <i class="fas fa-bars text-xl"></i>
+          </button>
+          <a
+            href="#"
+            onclick="showPage('home')"
+            class="flex items-center space-x-4"
+            style="text-decoration: none"
+          >
+            <img
+              src="images/paulpietersburg primere logo latest .png"
+              alt="School Logo"
+              class="w-24 h-24 object-contain"
+            />
+            <div class="flex flex-col items-start">
+              <h1
+                class="text-2xl md:text-2xl font-bold text-white"
+                style="position: relative; top: -6px"
+              >
+                Laerskool Paulpietersburg
+              </h1>
+              <span class="text-blue-100 text-xs md:text-xs">
+                Scientia est Potestas – Knowledge is power.
+              </span>
+            </div>
+          </a>
+        </div>
+  <div class="flex items-center space-x-3 md:space-x-6">
+          <a
+            href="https://web.facebook.com/profile.php?id=100066553329942"
+            target="_blank"
+            rel="noopener"
+            class="text-white hover:text-blue-300 transition-colors"
+          >
+            <i class="fab fa-facebook-f text-lg"></i>
+          </a>
+          <span class="hidden md:flex items-center text-white text-xs">
+            <i class="fas fa-map-marker-alt mr-1"></i>Kwa-Zulu Natal
+          </span>
+          <div class="hidden md:flex items-center text-white text-xs">
+            <i class="fas fa-phone-alt mr-2"></i>
+            <div class="flex flex-col">
+              <a href="tel:0107457733" class="hover:text-blue-300 transition-colors">010 745 7733</a>
+            </div>
+          </div>
+          <div class="hidden md:flex items-center text-white text-xs">
+            <i class="fas fa-envelope mr-2"></i>
+            <div class="flex flex-col">
+              <a href="mailto:primaryschool1034@gmail.com" class="hover:text-blue-300 transition-colors">primaryschool1034@gmail.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation Bar (matches screenshot style) -->
+    <nav class="bg-[#001f4d] shadow">
+      <div class="container mx-auto px-4">
+        <div class="flex items-center justify-between">
+          <div class="hidden md:flex items-center">
+            <ul class="flex space-x-2 md:space-x-4">
+              <li>
+                <button
+                  onclick="showPage('home')"
+                  class="nav-link px-6 py-4 font-semibold transition-colors"
+                  style="
+                    background-color: rgba(255, 106, 0, 0.15);
+                    color: #ff6a00;
+                    border-bottom: 3px solid #ff6a00;
+                  "
+                  onmouseover="this.style.backgroundColor='rgba(255, 106, 0, 0.2)'"
+                  onmouseout="this.style.backgroundColor=this.classList.contains('active') ? 'rgba(255,106,0,0.15)' : 'transparent'"
+                >
+                  Home
+                </button>
+              </li>
+              <li class="relative group">
+                <button
+                  class="nav-link px-6 py-4 font-semibold transition-colors flex items-center"
+                  style="color: white"
+                  onmouseover="this.style.backgroundColor='rgba(255, 106, 0, 0.2)'"
+                  onmouseout="this.style.backgroundColor='transparent'"
+                >
+                  About Us
+                  <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                </button>
+                <div
+                  class="dropdown-menu absolute left-0 top-full bg-white text-[#143a6d] shadow-lg rounded-b-lg min-w-48 z-50 hidden group-hover:block"
+                >
+                  <button
+                    onclick="showPage('about')"
+                    class="block w-full text-left px-4 py-3 hover:bg-blue-50 border-b font-semibold"
+                  >
+                    About School
+                  </button>
+                  <button
+                    onclick="showPage('staff')"
+                    class="block w-full text-left px-4 py-3 hover:bg-blue-50 border-b font-semibold"
+                  >
+                    Staff
+                  </button>
+                  <button
+                    onclick="showPage('applications')"
+                    class="block w-full text-left px-4 py-3 hover:bg-blue-50 border-b font-semibold"
+                  >
+                    Applications
+                  </button>
+                  <button
+                    onclick="showPage('gallery')"
+                    class="block w-full text-left px-4 py-3 hover:bg-blue-50 border-b font-semibold"
+                  >
+                    Gallery
+                  </button>
+                  <button
+                    onclick="showPage('sports')"
+                    class="block w-full text-left px-4 py-3 hover:bg-blue-50 border-b font-semibold"
+                  >
+                    Sports & Activities
+                  </button>
+                  <button
+                    onclick="showPage('dresscode')"
+                    class="block w-full text-left px-4 py-3 hover:bg-blue-50 border-b font-semibold"
+                  >
+                    Dress Code
+                  </button>
+                  <button
+                    onclick="showPage('policies')"
+                    class="block w-full text-left px-4 py-3 hover:bg-blue-50 font-semibold"
+                  >
+                    Policies
+                  </button>
+                </div>
+              </li>
+              <li>
+                <button
+                  onclick="showPage('news')"
+                  class="nav-link px-6 py-4 font-semibold text-white transition-colors"
+                  onmouseover="this.style.backgroundColor='rgba(255, 106, 0, 0.2)'"
+                  onmouseout="this.style.backgroundColor='transparent'"
+                >
+                  News & Announcements
+                </button>
+              </li>
+              <li>
+                <button
+                  onclick="showPage('contact')"
+                  class="nav-link px-6 py-4 font-semibold text-white transition-colors"
+                  onmouseover="this.style.backgroundColor='rgba(255, 106, 0, 0.2)'"
+                  onmouseout="this.style.backgroundColor='transparent'"
+                >
+                  Contact
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+      <!-- Hero Section -->
+      <section
+        class="h-[38rem] w-full flex items-center justify-center text-white"
+        style="
+          background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+            url('images/paulpiet\ rugby\ pixel.jpg');
+          background-size: cover;
+          background-position: center;
+        "
+      >
+        <div class="text-center max-w-4xl px-4">
+          <h2 class="text-5xl font-bold mb-4 hero-title">
+            Welcome to Laerskool Paulpietersburg
+          </h2>
+          <p class="text-xl mb-8 hero-subtitle">Scientia est Potestas-Knowledge is power</p>
+          <div class="space-x-4">
+            <button
+              onclick="showPage('about')"
+              class="px-12 py-3 rounded-lg font-semibold transition-colors border-2 button-text"
+              style="
+                background-color: rgba(255, 106, 0, 0.75);
+                color: white;
+                border-color: #ff6a00;
+                min-width: 180px;
+              "
+              onmouseover="this.style.backgroundColor='rgba(229,90,0,0.75)'; this.style.color='white'"
+              onmouseout="this.style.backgroundColor='rgba(255,106,0,0.75)'; this.style.color='white'"
+            >
+              Learn More
+            </button>
+            <button
+              onclick="showPage('applications')"
+              class="px-12 py-3 rounded-lg font-semibold transition-colors border-2 border-white button-text"
+              style="
+                background-color: transparent; 
+                color: white;
+                min-width: 180px;
+              "
+              onmouseover="this.style.backgroundColor='rgba(255,255,255,0.35)'; this.style.color='#001f4d'"
+              onmouseout="this.style.backgroundColor='transparent'; this.style.color='white'"
+            >
+              Start Your Journey
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Section -->
+      <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="max-w-6xl mx-auto">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 class="text-4xl font-bold mb-6 section-title" style="color: #001f4d">
+                  About Laerskool Paulpietersburg
+                </h2>
+
+                <p class="text-gray-600 mb-8 body-text">
+                  Paulpietersburg Primary school was established in April 1894.
+                </p>
+                <p class="text-gray-600 mb-8 body-text">
+                  It has had 17 principals up to date. Our first principal was
+                  Mr. H.W Stumpf.
+                </p>
+
+                <p class="text-gray-600 mb-8 body-text">
+                  Our current principal,Mr. V.D Eva, has been our principal
+                  since August 1997.
+                </p>
+                <button
+                  onclick="showPage('about')"
+                  class="px-8 py-3 rounded-lg font-semibold transition-colors text-white button-text"
+                  style="background-color: #ff6a00"
+                  onmouseover="this.style.backgroundColor='#e55a00'"
+                  onmouseout="this.style.backgroundColor='#ff6a00'"
+                >
+                  <i class="fas fa-history mr-2"
+                  ></i>Discover Our History
+                </button>
+              </div>
+              <div class="bg-white p-8 rounded-lg shadow-lg text-center hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                <h3 class="text-2xl font-bold mb-6 card-title" style="color: #001f4d">
+                  Quick Facts
+                </h3>
+                <div class="space-y-4 text-left">
+                  <div class="flex items-center space-x-3">
+                    <div
+                      class="w-12 h-12 rounded-full flex items-center justify-center bg-white shadow-md"
+                    >
+                      <i class="fas fa-calendar text-orange-500 text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="font-semibold card-title text-left">Established</p>
+                      <p class="text-gray-600 card-text text-left">
+                        1894 - Nearly 131 years of excellence
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div
+                      class="w-12 h-12 rounded-full flex items-center justify-center bg-white shadow-md"
+                    >
+                      <i class="fas fa-users text-orange-500 text-2xl"></i>
+                    </div>
+                    <div>
+                      <p class="font-semibold card-title text-left">Students</p>
+                      <p class="text-gray-600 card-text text-left">1, 000+ active learners</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div
+                      class="w-12 h-12 rounded-full flex items-center justify-center bg-white shadow-md"
+                    >
+                      <i
+                        class="fas fa-chalkboard-teacher text-orange-500 text-2xl"
+                      ></i>
+                    </div>
+                    <div>
+                      <p class="font-semibold card-title text-left">Faculty</p>
+                      <p class="text-gray-600 card-text text-left">+-35 dedicated educators</p>
+                    </div>
+                  </div>
+                  <div class="flex items-center space-x-3">
+                    <div
+                      class="w-12 h-12 rounded-full flex items-center justify-center bg-white"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Quick Info Section Removed for cleaner design -->
+
+      <!-- Sports & Activities Gallery -->
+      <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+          <div class="text-center mb-12">
+            <h2 class="text-4xl font-bold mb-4 section-title" style="color: #001f4d">
+              Sports & Activities
+            </h2>
+            <p class="text-gray-600 text-lg body-text">
+              We're committed to excellence in Academic and Athletics programs
+            </p>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
+            <div
+              class="bg-white rounded-lg shadow-xl overflow-hidden flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div
+                class="h-48 flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="images/paulpiet netbal play 2.jpg"
+                  alt="Netball"
+                  class="w-full h-full object-cover"
+                  onclick="showPage('gallery')"
+                  onmouseover="this.style.opacity='0.8'"
+                  onmouseout="this.style.opacity='1'"
+                />
+              </div>
+              <div class="flex-1 flex flex-col justify-center items-center p-4">
+                <h3 class="text-xl font-bold mb-1 text-center card-title">Netball</h3>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-xl overflow-hidden flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div
+                class="h-48 flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="images/paulpieet rugby (1).jpg"
+                  alt="Rugby"
+                  class="w-full h-full object-cover"
+                  onclick="showPage('gallery')"
+                  onmouseover="this.style.opacity='0.8'"
+                  onmouseout="this.style.opacity='1'"
+                />
+              </div>
+              <div class="flex-1 flex flex-col justify-center items-center p-4">
+                <h3 class="text-xl font-bold mb-1 text-center card-title">Rugby</h3>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-xl overflow-hidden flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div
+                class="h-48 flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="images/paulpiet-hockey girls.jpg"
+                  alt="Hockey"
+                  class="w-full h-full object-cover"
+                  onclick="showPage('gallery')"
+                  onmouseover="this.style.opacity='0.8'"
+                  onmouseout="this.style.opacity='1'"
+                />
+              </div>
+              <div class="flex-1 flex flex-col justify-center items-center p-4">
+                <h3 class="text-xl font-bold mb-1 text-center card-title">Hockey</h3>
+              </div>
+            </div>
+            <div
+              class="bg-white rounded-lg shadow-xl overflow-hidden flex flex-col justify-between hover:shadow-2xl transition-shadow duration-300"
+            >
+              <div
+                class="h-48 flex items-center justify-center overflow-hidden"
+              >
+                <img
+                  src="/images/paulpiet soccer.jpg"
+                  alt="Soccer"
+                  class="w-full h-full object-cover"
+                  onclick="showPage('gallery')"
+                  onmouseover="this.style.opacity='0.8'"
+                  onmouseout="this.style.opacity='1'"
+                />
+              </div>
+              <div class="flex-1 flex flex-col justify-center items-center p-4">
+                <h3 class="text-xl font-bold mb-1 text-center card-title">Soccer</h3>
+              </div>
+            </div>
+          </div>
+          <div class="w-full py-8 mb-8">
+            <div
+              class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-1 md:gap-2 w-full"
+            >
+              <img
+                src="images/paulpiet color festival.jpg"
+                alt="Pic 1"
+                class="w-full h-32 md:h-40 object-cover rounded-l-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+                onclick="showPage('gallery')"
+              />
+              <img
+                src="images/paulpiet rugby.jpg"
+                alt="Pic 2"
+                class="w-full h-32 md:h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                onclick="showPage('gallery')"
+              />
+              <img
+                src="images/paulpiet hockey senior team 2.jpg"
+                alt="Pic 3"
+                class="w-full h-32 md:h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                onclick="showPage('gallery')"
+              />
+              <img
+                src="images/paulpiet museum.jpg"
+                alt="Pic 4"
+                class="w-full h-32 md:h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                onclick="showPage('gallery')"
+              />
+              <img
+                src="images/paulpiet girls lunch.jpg"
+                alt="Pic 5"
+                class="w-full h-32 md:h-40 object-cover hover:scale-105 transition-transform duration-300 cursor-pointer"
+                onclick="showPage('gallery')"
+              />
+              <img
+                src="images/paulpiet kiddos.jpg"
+                alt="Pic 6"
+                class="w-full h-32 md:h-40 object-cover rounded-r-2xl hover:scale-105 transition-transform duration-300 cursor-pointer"
+                onclick="showPage('gallery')"
+              />
+            </div>
+          </div>
+          <div class="text-center mt-8">
+            <button
+              onclick="showPage('news')"
+              class="px-8 py-3 rounded-lg font-semibold transition-colors text-white button-text"
+              style="background-color: #ff6a00"
+              onmouseover="this.style.backgroundColor='#e55a00'"
+              onmouseout="this.style.backgroundColor='#ff6a00'"
+            >
+              <i class="fas fa-newspaper mr-2"></i>Read Latest News
+            </button>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-4xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-8 text-blue-900">
+              About Laerskool Paulpietersburg
+            </h2>
+            <!-- Our History centered -->
+            <div class="max-w-3xl mx-auto text-center mb-12">
+              <h3 class="text-2xl font-bold mb-4 text-blue-800">Our History</h3>
+              <p class="text-gray-600 mb-4">Paulpietersburg Primary School was established in April 1894.</p>
+              <p class="text-gray-600">It has had 17 principals to date. Our first principal was Mr. H.W. Stumpf. Our current principal, Mr. V.D. Eva, has been our principal since August 1997.</p>
+            </div>
+
+            <!-- Our Badge and Quick Facts side by side -->
+            <div class="grid md:grid-cols-2 gap-12 items-start">
+              <div>
+                <h3 class="text-2xl font-bold mb-4 text-blue-800">Our Badge</h3>
+                <p class="text-gray-600 mb-8">Our school badge was designed by Mr T. Meyer. The colors of the badge are gold and orange. The background is blue.</p>
+                <p class="text-gray-600 mb-8">The joining of the three schools are reflected in the badge as:
+                  <br />~ The aloe from Paulpietersburg School.
+                  <br />~ The lion from Braunschweig School.
+                  <br />~ The book of knowledge and the Bible from Commondale School.
+                </p>
+                <p class="text-gray-600 mb-8">The motto of the school is "Scientia est Potestas" which means "Knowledge is power".</p>
+              </div>
+              <div class="bg-blue-50 p-8 rounded-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                <h3 class="text-xl font-bold mb-4 text-blue-800 text-center">Quick Facts</h3>
+                <ul class="space-y-2 text-gray-600 text-center">
+                  <li>
+                    <i class="fas fa-chalkboard-teacher text-blue-600 mr-2"></i>
+                    130 Years of Excellence
+                  </li>
+                  <li>
+                    <i class="fas fa-graduation-cap text-blue-600 mr-2"></i>
+                    Grades: K-7
+                  </li>
+                  <div class="flex justify-center mt-4">
+                    <img src="images/paulpietersburg primere logo latest .png" alt="School Logo" class="w-24 h-24 object-contain">
+                  </div>
+                </ul>
+              </div>
+            </div>
+            
+            <p></p>
+            <h3 class="text-2xl font-bold mb-4 text-blue-800 mt-12 text-center">
+                  School song 
+                </h3>
+            
+              <!-- School Songs Section -->
+              <div class="grid md:grid-cols-2 gap-8 mb-16 mt-12">
+                <div class="bg-blue-50 p-6 rounded-lg">
+                  <h4 class="text-xl font-bold mb-4 text-blue-800">
+                    School Song (English)
+                  </h4>
+                  <p class="text-gray-700 mb-2">
+                    <em>Where proud & verdant pine trees stand
+like candles on the hill
+Comes from this fertile region
+the black gold of our land.
+
+</em>
+<p><em>🌊</em></p>
+                  </p>
+                  <p class="text-gray-700 mb-2">
+                    <em>Your lovely panorama
+of pale blue mountain range
+makes, place of two fine rivers,
+our hearts to glow with love.
+
+</em>
+<p class="text-gray-700 mb-2">
+                    <em>🌊</em>
+                  </p>
+                  </p>
+                  <p class="text-gray-700 mb-2">
+                    <em>From rocks of sandstone kranses
+was this our school then hewn
+Mould thus our children, Lord,
+to maturity step by step.</em>
+                  </p>
+                 
+                </div>
+                <div class="bg-green-50 p-6 rounded-lg">
+                  <h4 class="text-xl font-bold mb-4 text-green-800">
+                    Skoollied (Afrikaans)
+                  </h4>
+                  <p class="text-gray-700 mb-2">
+                    <em>Waar groen dennabome staan
+soos kerse teen die rand,
+kom uit die ryke aarde
+die swartgoud van ons land.
+
+</em>
+                  </p>
+                  <p class="text-gray-700 mb-2">
+                    <em>🌊</em>
+                  </p>
+                  <p class="text-gray-700 mb-2">
+                    <em>Jou skone vergesigte
+na ylblou bergeband
+laat, streek van twee mooi strome,
+ons hart van liefde brand.
+
+</em>
+                  </p>
+                  <p class="text-gray-700 mb-4">
+                    <em>🌊</em>
+                  </p>
+                  <p class="text-gray-700 mb-4">
+                    <em>Uit rots van sandsteen kranse
+is hierdie skool gekap,
+vorm só ons kinders, Here,
+tot volgroeiheid stap vir stap.</em>
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Mission and Vision Section -->
+            <div class="grid md:grid-cols-2 gap-8 mb-16 mt-12">
+              <div class="bg-blue-50 p-6 rounded-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                <h4 class="text-xl font-bold mb-4 text-blue-800 text-center">
+                  Our Mission
+                </h4>
+                <p class="text-gray-700 text-center"><em>Provide quality education by means of instruction, guidance and facilitation by a core of dedicated and accountable educators. Raise standards for learners at all levels both in and out of school. Encourage parental and community involvement in our school. The school will be managed in a Christian environment.</em></p>
+              </div>
+              <div class="bg-green-50 p-6 rounded-lg hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+                <h4 class="text-xl font-bold mb-4 text-green-800 text-center">
+                  Our Vision
+                </h4>
+                <p class="text-gray-700 text-center"><em>Paulpietersburg Primary School Strives to provide quality education to learners in order to uplift and empower them to play a responsible and meaningful role in society.</em></p>
+              </div>
+            </div>
+          </div>
+      </section>
+    </div>
+
+    <!-- Staff Page -->
+    <div id="staff" class="page">
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">
+            Our Staff & Management
+          </h2>
+          <div class="max-w-4xl mx-auto">
+            <!-- Principal -->
+            <div class="mb-8">
+              <h3 class="text-2xl font-bold text-blue-800 mb-2">Principal</h3>
+              <div class="flex flex-wrap gap-6 justify-center">
+                <!-- Add principal(s) here -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs evan gr1 HOD and mr eva principal.jpeg"
+                    alt="Principal"
+                    class="w-32 h-32 rounded-full mx-auto mb-4 border-4 border-gold-600 object-cover scale-110 object-right"
+                  />
+                  <h4 class="text-xl font-bold mb-1">Mr & Mrs Eva </h4>
+                  <p class="text-blue-600 mb-2">Principal & Gr1-2 HOD</p>
+                  
+                </div>
+              </div>
+            </div>
+            <!-- Deputy Principal -->
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-blue-800 mb-2">
+                Deputy Principal
+              </h3>
+              <div class="flex flex-wrap gap-6 justify-center">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    style="position: relative;"
+                    src="images/staff/MRS currie & mr currie (deputy principal).jpeg"
+                    alt="Deputy Principal"
+                    class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-gold-600"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mr & Mrs Currie</h4>
+                  <p class="text-blue-600 mb-2">Deputy Principal & Afrikaans Teacher</p>
+                 
+                </div>
+              </div>
+            </div>
+            <!-- Heads of Grades -->
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-blue-700 mb-2">
+                Heads of Grades
+              </h3>
+              <div class="flex flex-wrap gap-6 justify-center">
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs evan gr1 HOD and mr eva principal.jpeg"
+                    alt="Head of Grade 1"
+                    class="w-32 h-32 rounded-full mx-auto mb-4  border-4 border-gold-600 object-cover scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Eva</h4>
+                  <p class="text-blue-600 mb-2">Head of Grade 1</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs shabalala gr 2-3 HOD.jpeg"
+                    alt="Head of Grade 2-3"
+                    class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-gold-600  scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Shabalala</h4>
+                  <p class="text-blue-600 mb-2">Head of Grade 2-3</p>
+                </div>
+                
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/miss viljoen gr4-7 HOD.jpeg"
+                    alt="Head of Grade 5-7"
+                    class="w-32 h-32 rounded-full mx-auto mb-4 object-cover border-4 border-gold-600"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Miss Viljoen</h4>
+                  <p class="text-blue-600 mb-2">Head of Grade 4-7</p>
+                </div>
+              </div>
+            </div>
+            <!-- Other Staff by Grade -->
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-blue-800 mb-2">
+                Staff 
+              </h3>
+              <div class="flex flex-wrap gap-6 justify-center">
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/miss qwabe foundation phase.jpeg"
+                    alt="Grade 1 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Miss Qwabe</h4>
+                  <p class="text-blue-600 mb-2"> Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/Ms Khumalo foundation phase.jpeg"
+                    alt="Grade 1 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Ms Khumalo</h4>
+                  <p class="text-blue-600 mb-2">Foundation Phase Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/ms hadebe gr r.jpeg"
+                    alt="Grade 1 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Ms Hadebe</h4>
+                  <p class="text-blue-600 mb-2">Grade R Teacher</p>
+                </div>
+
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs nhlabathu gr r.jpeg"
+                    alt="Grade 1 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Nhlabathu</h4>
+                  <p class="text-blue-600 mb-2">Grade R Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/ms mdlalose gr r.jpeg"
+                    alt="Grade 1 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Ms Mdlalose</h4>
+                  <p class="text-blue-600 mb-2">Grade R Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs beneke gr1.jpeg"
+                    alt="Grade 1 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Beneke</h4>
+                  <p class="text-blue-600 mb-2">Grade 1 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/ms khalishwayo gr1.jpeg"
+                    alt="Grade 1 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Ms Khalishwayo</h4>
+                  <p class="text-blue-600 mb-2">Grade 1 Teacher</p>
+                </div>
+              
+              
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs kok gr1.jpeg"
+                    alt="Grade 1 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Kok</h4>
+                  <p class="text-blue-600 mb-2">Grade 1 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs elges gr2.jpeg"
+                    alt="Grade 2 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Elges</h4>
+                  <p class="text-blue-600 mb-2">Grade 2 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/ms jiyane gr2.jpeg"
+                    alt="Grade 2 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Ms Jiyane</h4>
+                  <p class="text-blue-600 mb-2">Grade 2 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/miss dlamini gr2.jpeg"
+                    alt="Grade 2 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Miss Dlamini</h4>
+                  <p class="text-blue-600 mb-2">Grade 2 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/miss mayaba gr2.jpeg"
+                    alt="Grade 2 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Miss Mayaba</h4>
+                  <p class="text-blue-600 mb-2">Grade 2 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs van wyk gr3.jpeg"
+                    alt="Grade 3 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Van Wyk</h4>
+                  <p class="text-blue-600 mb-2">Grade 3 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/miss zulu gr3.jpeg"
+                    alt="Grade 3 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Miss Zulu</h4>
+                  <p class="text-blue-600 mb-2">Grade 3 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs orchison gr3.jpeg"
+                    alt="Grade 3 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Orchison</h4>
+                  <p class="text-blue-600 mb-2">Grade 3 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs malan gr4.jpeg"
+                    alt="Grade 4 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Malan</h4>
+                  <p class="text-blue-600 mb-2">Grade 4 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/miss mtshali gr4.jpeg"
+                    alt="Grade 4 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Miss Mhlanga</h4>
+                  <p class="text-blue-600 mb-2">Grade 4 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/miss ngwenya gr4.jpeg"
+                    alt="Grade 4 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Miss Ngwenya</h4>
+                  <p class="text-blue-600 mb-2">Grade 4 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/ms hlatshwayo gr4.jpeg"
+                    alt="Grade 4 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Ms Hlatshwayo</h4>
+                  <p class="text-blue-600 mb-2">Grade 4 Teacher</p>
+                </div>
+                  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mr ngwenya gr5.jpeg"
+                    alt="Grade 5 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mr Ngwenya</h4>
+                  <p class="text-blue-600 mb-2">Grade 5 Teacher</p>
+                </div>
+                  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/ms mncube gr5.jpeg"
+                    alt="Grade 5 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Ms Mncube</h4>
+                  <p class="text-blue-600 mb-2">Grade 5 Teacher</p>
+                </div>
+                  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs mlaba gr5.jpeg"
+                    alt="Grade 5 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Mlaba</h4>
+                  <p class="text-blue-600 mb-2">Grade 5 Teacher</p>
+                </div>
+                  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mr lurai gr6.jpeg"
+                    alt="Grade 6 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mr Lurai</h4>
+                  <p class="text-blue-600 mb-2">Grade 6 Teacher</p>
+                </div>
+                <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mr mbhamali senior phase.jpeg"
+                    alt="Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mr Mbhamali</h4>
+                  <p class="text-blue-600 mb-2">Senior Phase Teacher</p>
+                </div>  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mr kubheka senior phase.jpeg"
+                    alt="Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mr Kubheka</h4>
+                  <p class="text-blue-600 mb-2">Senior Phase Teacher</p>
+                </div>
+                  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/miss hadebe llibriary.jpeg"
+                    alt="Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Ms Hadebe</h4>
+                  <p class="text-blue-600 mb-2">Library Teacher</p>
+                </div>
+                 <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mrs schutte secretary.jpeg"
+                    alt="Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 "
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mrs Schutte</h4>
+                  <p class="text-blue-600 mb-2">Secretary</p>
+                </div>
+               <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/miss mbatha secretary.jpeg"
+                    alt="Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Miss Mbatha</h4>
+                  <p class="text-blue-600 mb-2">Secretary</p>
+                </div>
+                  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mr mayaba gr7.jpeg"
+                    alt="Grade 7 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mr Mayaba</h4>
+                  <p class="text-blue-600 mb-2">Grade 7 Teacher</p>
+                </div>
+                  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/Mr. Msezane gr.jpeg"
+                    alt="grade 7 Staff "
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mr. Msezane</h4>
+                  <p class="text-blue-600 mb-2">Grade 7 Teacher</p>
+                </div>
+                  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mr holliday gr 6.jpeg"
+                    alt="Grade 6 Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover  border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mr Holliday</h4>
+                  <p class="text-blue-600 mb-2">Grade 6 Teacher</p>
+                </div>  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mr ndebele physical traning.jpeg"
+                    alt="Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mr Ndebele</h4>
+                  <p class="text-blue-600 mb-2">Physical Training Teacher</p>
+                </div>
+                  <!-- Example for Grade 1 -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/staff/mr zulu coding and robotics.jpeg"
+                    alt="Staff"
+                    class="w-24 h-24 rounded-full mx-auto mb-4 object-cover scale-100 border-4 border-gray-400 scale-110 object-top"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Mr Zulu</h4>
+                  <p class="text-blue-600 mb-2">Coding and Robotics Teacher</p>
+                </div>
+               
+                <!-- Repeat for other grades as needed -->.
+
+              </div>
+            </div>
+            <!-- General Staff -->
+            <div class="mb-8">
+              <h3 class="text-xl font-bold text-blue-800 mb-2">General Staff</h3>
+              <div class="flex flex-wrap gap-6 justify-center">
+                <!-- Pulpiet's General Worker (Female) -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/pauliet general staff females.jpeg"
+                    alt="General Worker (Female)"
+                    class="w-24 h-24  mx-auto mb-4 object-cover border-4 border-gray-400 scale-110 object-fit"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Masondo
+Maduma
+Zondo
+Maduma
+Khumalo
+Mdluli
+Skhakhane
+Thwala
+Simelane</h4>
+                  <p class="text-blue-600 mb-2"> Ladies</p>
+                </div>
+
+                <!-- Pulpiet's General Worker (Male) -->
+                <div class="bg-white rounded-lg shadow-lg p-6 text-center w-64">
+                  <img
+                    src="images/paulpiet general staff males.jpeg"
+                    alt="General Worker (Male)"
+                    class="w-24 h-24  mx-auto mb-4 object-contain border-4 border-gray-400 scale-110 object-fit"
+                  />
+                  <h4 class="text-lg font-bold mb-1">Sithole
+Ndlangamandla
+Zondo
+Shandu
+Buthelezi
+Mtshali</h4>
+                  <p class="text-blue-600 mb-2">Gentlemen</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Applications Page -->
+    <div id="applications" class="page">
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-blue-900">Applications</h2>
+            <p class="text-lg text-gray-700 mb-6">
+              Applications for the year 2025/2026 are now open. Download the
+              application below and bring it to the office to confirm your
+              application.
+            </p>
+            <a
+              href="/application form Palpietersburg primere 2026 .pdf"
+              download
+              class="bg-blue-700 text-white px-8 py-4 font-semibold transition-colors hover:bg-blue-800 styled-link rounded-lg"
+              >Download Application Form</a
+            >
+          </div>
+        </div>
+      </section>
+       <!-- Add this under the Applications section -->
+    <!-- filepath: c:\Users\shaba\OneDrive\Documents\Website\paulpietersburg laerskool-   3rd\index.html -->
+    <section class="py-8 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto">
+          <h3 class="text-2xl mb-4 font-bold text-blue-800 text-center">School Banking Details</h3>
+          <div class="bg-blue-50 rounded-lg p-6 shadow-lg mb-6 hover:shadow-xl hover:scale-105 transition-all duration-300 cursor-pointer">
+            <p class="mb-2  text-lg"><strong>Paulpietersburg Primary School</strong></p>
+            <p class="mb-2 text-gray-700"><strong>ABSA Bank Paulpietersburg</strong></p>
+            <p class="mb-2 text-gray-700"><strong>Acc. No.:</strong> 4061503790</p>
+            <p class="mb-2 text-gray-700"><strong>Branch Code:</strong> 632005</p>
+            <p class="mb-2 text-gray-700"ef.:</strong> Name, Surname &amp; Grade of Child</p>
+            <p class="mt-4 text-sm text-blue-900">
+              <strong>eMail Deposit slip to:</strong> 
+              <a href="mailto:primaryschool1034@gmail.com" class="text-blue-700 hover:text-blue-900 transition-colors">primaryschool1034@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    </div>
+
+    <!-- Sports & Activities Page -->
+    <div id="sports" class="page">
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">
+            Sports & Activities
+          </h2>
+          <div class="grid md:grid-cols-2 gap-12">
+            <div>
+              <h3 class="text-2xl font-bold mb-6 text-blue-800">
+                Sports Programs
+              </h3>
+              <div class="space-y-4">
+                <div
+                  class="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  <i class="fas fa-football-ball text-blue-600 text-xl"></i>
+                  <span class="font-semibold">Rugby</span>
+                </div>
+                <div
+                  class="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  <i class="fas fa-hockey-puck text-blue-600 text-xl"></i>
+                  <span class="font-semibold">Hockey</span>
+                </div>
+                <div
+                  class="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  <i class="fas fa-futbol text-blue-600 text-xl"></i>
+                  <span class="font-semibold">Soccer</span>
+                </div>
+                <div
+                  class="flex items-center space-x-3 p-4 bg-blue-50 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  <i class="fas fa-volleyball-ball text-blue-600 text-xl"></i>
+                  <span class="font-semibold">Netball</span>
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-6 text-green-800">
+                Clubs & Activities
+              </h3>
+              <div class="space-y-4">
+                <div
+                  class="flex items-center space-x-3 p-4 bg-green-50 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  <i class="fas fa-chess text-green-600 text-xl"></i>
+                  <span class="font-semibold">Chess Club</span>
+                </div>
+                <div
+                  class="flex items-center space-x-3 p-4 bg-green-50 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  <i class="fas fa-female text-green-600 text-xl"></i>
+                  <span class="font-semibold">Girl Guides</span>
+                </div>
+                <div
+                  class="flex items-center space-x-3 p-4 bg-green-50 rounded-lg hover:shadow-lg hover:scale-105 transition-all duration-300 cursor-pointer"
+                >
+                  <i class="fas fa-music text-green-600 text-xl"></i>
+                  <span class="font-semibold">Choir</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- News & Announcements Page -->
+    <div id="news" class="page">
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2
+            class="text-4xl font-bold text-center mb-4"
+            style="color: #001f4d"
+          >
+            News & Announcements
+          </h2>
+          <p class="text-center text-gray-600 mb-12">
+            Stay updated with the latest happenings at Laerskool Paulpietersburg
+          </p>
+
+          <div class="max-w-6xl mx-auto grid lg:grid-cols-3 gap-8">
+            <!-- Main News Section -->
+            <div class="lg:col-span-2 space-y-8">
+              <article
+                class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-green-600 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-green-800">
+                    Reading Competition Winners Announced
+                  </h3>
+                  <span class="text-sm text-gray-500">September 05, 2025</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Congratulations to all participants in this term's reading
+                  competition! See the full list of winners and their prizes on
+                  our Facebook page.
+                </p>
+                <div class="flex items-center text-green-600 text-sm">
+                  <i class="fas fa-tag mr-2"></i>
+                  <span>Competition, Awards</span>
+                </div>
+              </article>
+
+              <article
+                class="bg-white rounded-lg shadow-lg p-6 border-l-4 border-yellow-600 hover:shadow-2xl hover:scale-105 transition-all duration-300 cursor-pointer"
+              >
+                <div class="flex justify-between items-start mb-4">
+                  <h3 class="text-xl font-bold text-yellow-800">
+                    Rugby tournament.
+                  </h3>
+                  <span class="text-sm text-gray-500">August 25, 2025</span>
+                </div>
+                <p class="text-gray-600 mb-4">
+                  Our rugby team showcased exceptional skill and teamwork at the
+                  recent inter-school tournament!
+                </p>
+                <div class="flex items-center text-yellow-600 text-sm">
+                  <i class="fas fa-tag mr-2"></i>
+                  <span>Sports, Excursions</span>
+                </div>
+              </article>
+            </div>
+
+            <!-- Facebook Feed Sidebar -->
+            <div class="lg:col-span-1">
+              <div class="bg-white rounded-lg shadow-lg p-6 sticky top-4">
+                <div class="flex items-center mb-6">
+                  <i
+                    class="fab fa-facebook-f text-2xl mr-3"
+                    style="color: #1877f2"
+                  ></i>
+                  <h3 class="text-xl font-bold" style="color: #001f4d">
+                    Facebook Updates
+                  </h3>
+                </div>
+
+                <!-- Facebook Page Embed -->
+                <div class="mb-6">
+                  <iframe
+                    src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D100066553329942&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+                    width="100%"
+                    height="500"
+                    style="border: none; overflow: hidden"
+                    scrolling="no"
+                    frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  ></iframe>
+                </div>
+
+                <div class="mt-6 text-center">
+                  <a
+                    href="#"
+                    class="inline-flex items-center px-4 py-2 rounded-lg text-white text-sm font-medium transition-colors"
+                    style="background-color: #1877f2"
+                    onmouseover="this.style.backgroundColor='#166fe5'"
+                    onmouseout="this.style.backgroundColor='#1877f2'"
+                  >
+                    <i class="fab fa-facebook-f mr-2"></i>
+                    Follow Us on Facebook
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-12 text-blue-900">
+            Contact Us
+          </h2>
+          <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12">
+            <div class="mb-8">
+              <h3 class="text-2xl font-bold mb-6 text-blue-800">
+                Our Location
+              </h3>
+              <div class="w-full h-64 border border-blue-200">
+                <!-- Google Map Embed: Replace the src URL with your school's location -->
+                <iframe
+                  src="https://www.google.com/maps?q=26+Maarschalk+St,+Paulpietersburg,+Kwazulu-Natal+3180&output=embed"
+                  width="100%"
+                  height="100%"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold mb-6 text-blue-800">
+                Get in Touch
+              </h3>
+              <div class="space-y-4 mb-8">
+                <div class="flex items-center space-x-3">
+                  <i class="fas fa-map-marker-alt text-blue-600 text-xl"></i>
+                  <div>
+                    <p class="font-semibold">Address</p>
+                    <p class="text-gray-600">
+                      26 Maarschalk St Paulpietersburg-Kwazulu-Natal 3180
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i class="fas fa-phone text-blue-600 text-xl"></i>
+                  <div>
+                    <p class="font-semibold">Phone</p>
+                    <p class="text-gray-600">
+                      Telephone:
+                      <a href="tel:0107457733" class="hover:underline"
+                        >010 745 7733</a
+                      >
+                    </p>
+                    <p class="text-gray-600">
+                      Cellphone:
+                      <a href="tel:0810368646" class="hover:underline"
+                        >081 036 8646</a
+                      >
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i class="fas fa-envelope text-blue-600 text-xl"></i>
+                  <div>
+                    <p class="font-semibold">Email</p>
+                    <p class="text-gray-600">
+                      <a href="mailto:PAULPIETERSBURG-PS@kznschools.gov.za" class="hover:underline">PAULPIETERSBURG-PS@kznschools.gov.za</a><br/>
+                      <a href="mailto:primaryschool1034@gmail.com" class="hover:underline">primaryschool1034@gmail.com</a>
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center space-x-3">
+                  <i class="fas fa-clock text-blue-600 text-xl"></i>
+                  <div>
+                    <p class="font-semibold">Office Hours</p>
+                    <p class="text-gray-600">
+                      Monday - Friday: 7::30 AM - 2:30 PM
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="bg-blue-50 p-6 rounded-lg">
+                <h4 class="font-bold mb-3">Follow Us</h4>
+                <div class="flex space-x-4">
+                  <a
+                    href="#"
+                    href="https://web.facebook.com/profile.php?id=100066553329942"
+                    target="_blank"
+                    rel="noopener"
+                    class="w-10 h-10 bg-blue-600 rounded-full flex items-center justify-center text-white hover:bg-blue-700 transition-colors"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div>
+              <h3 class="text-2xl font-bold mb-6 text-blue-800">
+                Send us a Message
+              </h3>
+              <form class="space-y-4" action="mailto:PAULPIETERSBURG-PS@kznschools.gov.za,primaryschool1034@gmail.com" method="POST" enctype="text/plain">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your full name"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Email</label
+                  >
+                  <input
+                    type="email"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Subject</label
+                  >
+                  <select
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
+                    <option>General Inquiry</option>
+                    <option>Admissions</option>
+                    <option>Academic Programs</option>
+                    <option>Sports & Activities</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Message</label
+                  >
+                  <textarea
+                    rows="4"
+                    class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    placeholder="Your message here..."
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  Send Message
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Gallery Page -->
+    <div id="gallery" class="page">
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <h2 class="text-4xl font-bold text-center mb-8 text-blue-900">
+            Gallery
+          </h2>
+          <div
+            id="autoGallery"
+            class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6"
+          ></div>
+          <div class="mt-12 text-center">
+            <h3 class="text-2xl font-bold mb-4 text-blue-800">
+              Facebook Gallery
+            </h3>
+            <iframe
+              src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fweb.facebook.com%2Fprofile.php%3Fid%3D100066553329942&tabs=photos&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true"
+              width="100%"
+              height="500"
+              style="border: none; overflow: hidden"
+              scrolling="no"
+              frameborder="0"
+              allowfullscreen="true"
+              allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+            ></iframe>
+          </div>
+        </div>
+      </section>
+    </div>
+
+     <!-- Policies page -->
+    <div id="policies" class="page">
+      <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+          <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8 text-blue-900">Policies</h2>
+            <p class="text-lg text-gray-700 mb-6">
+              Our school policies ensure a safe, respectful, and productive environment for all learners and staff. Please read our Code of Conduct for Learners below.
+            </p>
+            <a
+              href="learners-code-of-conduct-paulpietersburg-primere.pdf"
+              target="_blank"
+              class="bg-blue-700 text-white px-8 py-4 font-semibold transition-colors hover:bg-blue-900 rounded-lg"
+            >
+              <i class="fas fa-file-pdf mr-2"></i>
+              View Code of Conduct for Learners (PDF)
+            </a>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Dress Code Page: Five Uniform Pictures with Explanations, Responsive Layout -->
+<!-- Place this inside your index.html where the Dress Code page content goes -->
+<div id="dresscode" class="page">
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-4xl font-bold mb-8 text-blue-900 text-center">
+        Dress Code & Uniform
+      </h2>
+      <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+        <!-- Uniform 1 -->
+        <div class="dc-card flex flex-col items-center">
+          <div class="gallery-item w-full">
+            <img src="images/paulpiet uniform 1.jpeg" alt="Boys and Girls Uniform" class="gallery-image" />
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+          <p class="mt-2 text-sm text-gray-700 text-center">Boys and Girls</p>
+        </div>
+        <!-- Uniform 2 -->
+        <div class="dc-card flex flex-col items-center">
+          <div class="gallery-item w-full">
+            <img src="images/paulpiet uniform 2.jpeg" alt="Boys Uniform" class="gallery-image" />
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+          <p class="mt-2 text-sm text-gray-700 text-center">Boys</p>
+        </div>
+        <!-- Uniform 3 -->
+        <div class="dc-card flex flex-col items-center">
+          <div class="gallery-item w-full">
+            <img src="images/paulpiet uniform 3.jpeg" alt="Boys Uniform" class="gallery-image" />
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+          <p class="mt-2 text-sm text-gray-700 text-center">Boys</p>
+        </div>
+        <!-- Uniform 4 -->
+        <div class="dc-card flex flex-col items-center">
+          <div class="gallery-item w-full">
+            <img src="images/paulpiet uniform 4.jpeg" alt="Boys Uniform" class="gallery-image" />
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+          <p class="mt-2 text-sm text-gray-700 text-center">Boys</p>
+        </div>
+        <!-- Uniform 5 -->
+        <div class="dc-card flex flex-col items-center">
+          <div class="gallery-item w-full">
+            <img src="images/paulpiet uniform 5 sports.jpeg" alt="Sports Uniform" class="gallery-image" />
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+          <p class="mt-2 text-sm text-gray-700 text-center">Boys and Girls</p>
+        </div>
+        <!-- Uniform 6 -->
+        <div class="dc-card flex flex-col items-center">
+          <div class="gallery-item w-full">
+            <img src="images/paulpiet uniform 6 tracksuits.jpeg" alt="Tracksuit Uniform" class="gallery-image" />
+            <div class="gallery-overlay"><i class="fas fa-search-plus"></i></div>
+          </div>
+          <p class="mt-2 text-sm text-gray-700 text-center">Boys and Girls</p>
+        </div>
+      </div>
+      <div class="max-w-2xl mx-auto mt-12 text-center">
+        <h3 class="text-lg font-bold mb-2 text-blue-800">Dress Code Policy</h3>
+        <p class="text-gray-700 mb-4">
+          All learners must wear the correct uniform for their grade and season. Uniforms should be neat, clean, and worn with pride. For full details, please contact the school office.
+        </p>
+      </div>
+    </div>
+  </section>
+</div>
+    <!-- Footer (matches screenshot style) -->
+    <footer class="bg-[#001f4d] text-white py-12 mt-16">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:justify-between md:items-center space-y-8 md:space-y-0">
+          <div class="flex items-center space-x-3">
+            <img
+              src="images/paulpietersburg primere logo latest .png"
+              alt="Footer Logo"
+              class="w-10 h-10 object-contain"
+            />
+            <div>
+              <h3 class="text-xl font-bold">Laerskool Paulpietersburg</h3>
+              <span class="text-blue-200 text-sm">Scientia est Potestas-Knowledge is power.</span>
+            </div>
+          </div>
+          <div class="flex flex-col md:flex-row md:space-x-12 space-y-4 md:space-y-0">
+            <div>
+              <h4 class="font-bold mb-2">Quick Links</h4>
+              <ul class="space-y-1 text-blue-200 text-sm">
+                <li>
+                  <button onclick="showPage('about')" class="hover:text-white transition-colors">About Us</button>
+                </li>
+                <li>
+                  <button onclick="showPage('news')" class="hover:text-white transition-colors">News</button>
+                </li>
+                <li>
+                  <button onclick="showPage('contact')" class="hover:text-white transition-colors">Contact</button>
+                </li>
+                <li>
+                  <button onclick="showPage('applications')" class="hover:text-white transition-colors">Admissions</button>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-2">Programs</h4>
+              <ul class="space-y-1 text-blue-200 text-sm">
+                <li>
+                  <button onclick="showPage('sports')" class="hover:text-white transition-colors">Sports</button>
+                </li>
+                <li>
+                  <button onclick="showPage('sports')" class="hover:text-white transition-colors">Activities</button>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 class="font-bold mb-2">Connect</h4>
+              <div class="flex space-x-3 mb-2">
+                <a href="https://web.facebook.com/profile.php?id=100066553329942" class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                  <i class="fab fa-facebook-f text-sm"></i>
+                </a>
+                <a href="mailto:PAULPIETERSBURG-PS@kznschools.gov.za" class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                  <i class="fas fa-envelope text-sm"></i>
+                </a>
+                <a href="tel:0107457733" class="w-8 h-8 bg-blue-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition-colors">
+                  <i class="fas fa-phone text-sm"></i>
+                </a>
+              </div>
+              <div class="space-y-1 text-blue-200 text-sm">
+                <p>
+                  <i class="fas fa-phone mr-2"></i>
+                  <a href="tel:0107457733" class="hover:text-white transition-colors">010 745 7733</a>
+                  <a href="tel:0810368646" class="hover:text-white transition-colors">081 036 8646</a>
+                </p>
+                <p>
+                  <i class="fas fa-envelope mr-2"></i>
+                  <a href="mailto:PAULPIETERSBURG-PS@kznschools.gov.za" class="hover:text-white transition-colors">PAULPIETERSBURG-PS@kznschools.gov.za</a>
+                  <br/>
+                  <span class="inline-block ml-6">
+                    <a href="mailto:primaryschool1034@gmail.com" class="hover:text-white transition-colors">primaryschool1034@gmail.com</a>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="border-t border-blue-800 mt-8 pt-8 text-center text-blue-200 text-sm"
+        >
+          <p>
+            &copy; 2025 Laerskool Paulpietersburg. All rights reserved. |
+            Designed and developed by
+            <a
+              href="https://thedigitize.sshabalala.com"
+              target="_blank"
+              style="color: inherit; text-decoration: none"
+              >TheDigitize</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function showPage(pageId) {
+        // Hide all pages
+        const pages = document.querySelectorAll(".page");
+        pages.forEach((page) => {
+          page.classList.remove("active");
+          // Reset transition for next show
+          page.style.opacity = "0";
+          page.style.transform = "translateY(-40px)";
+        });
+
+        // Remove active class from all nav links
+        const navLinks = document.querySelectorAll(".nav-link");
+        navLinks.forEach((link) => link.classList.remove("active"));
+
+        // Show selected page with transition
+        const activePage = document.getElementById(pageId);
+        if (activePage) {
+          activePage.classList.add("active");
+          setTimeout(() => {
+
+            activePage.style.opacity = "1";
+            activePage.style.transform = "translateY(0)";
+          }, 10);
+        }
+
+        // Add active class to corresponding nav link
+        const activeNavLink = document.querySelector(
+          `[onclick="showPage('${pageId}')"]`
+        );
+        if (activeNavLink && activeNavLink.classList.contains("nav-link")) {
+          activeNavLink.classList.add("active");
+        }
+
+        // Scroll to top
+        window.scrollTo(0, 0);
+      }
+    </script>
+    <script>
+      (function () {
+        function c() {
+          var b = a.contentDocument || a.contentWindow.document;
+          if (b) {
+            var d = b.createElement("script");
+            d.innerHTML =
+              "window.__CF$cv$params={r:'970a3eccb25d2126',t:'MTc1NTQ0NDk2OC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";
+            b.getElementsByTagName("head")[0].appendChild(d);
+          }
+        }
+        if (document.body) {
+          var a = document.createElement("iframe");
+          a.height = 1;
+          a.width = 1;
+          a.style.position = "absolute";
+          a.style.top = 0;
+          a.style.left = 0;
+          a.style.border = "none";
+          a.style.visibility = "hidden";
+          document.body.appendChild(a);
+          if ("loading" !== document.readyState) c();
+          else if (window.addEventListener)
+            document.addEventListener("DOMContentLoaded", c);
+          else {
+            var e = document.onreadystatechange || function () {};
+            document.onreadystatechange = function (b) {
+              e(b);
+              "loading" !== document.readyState &&
+                ((document.onreadystatechange = e), c());
+            };
+          }
+        }
+      })();
+    </script>
+    <!-- Scroll to Top Button (always visible, moves with scroll) -->
+    <button
+      onclick="window.scrollTo({top: 0, behavior: 'smooth'});"
+      aria-label="Scroll to top"
+      class="fixed bottom-6 right-6 z-50 bg-orange-500 hover:bg-orange-600 text-white rounded-full shadow-lg p-4 flex items-center justify-center transition-colors opacity-70"
+      style="width: 56px; height: 56px;"
+    >
+      <i class="fas fa-arrow-up text-2xl"></i>
+    </button>
+
+    <!-- Mobile Menu Button moved inline into header (see header block) -->
+    <div
+      id="mobileMenu"
+      class="fixed inset-0 bg-white bg-opacity-95 z-50 flex flex-col items-center justify-center space-y-8 text-xl font-semibold text-blue-900 hidden"
+    >
+      <button onclick="showPage('home');toggleMobileMenu()" class="w-full py-3">
+        Home
+      </button>
+      <button
+        onclick="showPage('about');toggleMobileMenu()"
+        class="w-full py-3"
+      >
+        About Us
+      </button>
+      <button
+        onclick="showPage('staff');toggleMobileMenu()"
+        class="w-full py-3"
+      >
+        Staff
+      </button>
+      <button
+        onclick="showPage('applications');toggleMobileMenu()"
+        class="w-full py-3"
+      >
+        Applications
+      </button>
+      <button onclick="showPage('news');toggleMobileMenu()" class="w-full py-3">
+        News & Announcements
+      </button>
+      <button
+        onclick="showPage('contact');toggleMobileMenu()"
+        class="w-full py-3"
+      >
+        Contact
+      </button>
+      <button onclick="toggleMobileMenu()" class="mt-8 text-red-600">
+        Close
+      </button>
+    </div>
+    <script>
+      function toggleMobileMenu() {
+        const menu = document.getElementById("mobileMenu");
+        menu.classList.toggle("hidden");
+      }
+      document.getElementById("mobileMenuBtn").onclick = toggleMobileMenu;
+    </script>
+    <script>
+      // Automatically collect all images from the site and show in gallery
+      function updateGallery() {
+        const allImages = document.querySelectorAll("img");
+        const galleryDiv = document.getElementById("autoGallery");
+        galleryDiv.innerHTML = "";
+        allImages.forEach((img) => {
+          // Only show images that are not already in the gallery to avoid duplicates
+          if (!galleryDiv.contains(img)) {
+            // Create gallery item container
+            const galleryItem = document.createElement("div");
+            galleryItem.className = "gallery-item";
+            
+            // Clone the image
+            const clone = img.cloneNode();
+            clone.className = "gallery-image";
+            clone.alt = img.alt || "Gallery Image";
+            
+            // Create overlay for hover effect
+            const overlay = document.createElement("div");
+            overlay.className = "gallery-overlay";
+            overlay.innerHTML = '<i class="fas fa-search-plus"></i>';
+            
+            // Assemble the gallery item
+            galleryItem.appendChild(clone);
+            galleryItem.appendChild(overlay);
+            
+            // Add click functionality to open image in new tab
+            galleryItem.addEventListener('click', function() {
+              window.open(img.src, '_blank');
+            });
+            
+            // Add cursor pointer
+            galleryItem.style.cursor = 'pointer';
+            
+            galleryDiv.appendChild(galleryItem);
+          }
+        });
+      }
+      // Update gallery when page loads and when switching pages
+      document.addEventListener("DOMContentLoaded", updateGallery);
+      window.showPage = (function (orig) {
+        return function (pageId) {
+          orig(pageId);
+          if (pageId === "gallery") updateGallery();
+          if (pageId === "dresscode") {
+            // Attach click to open for dresscode gallery items
+            document.querySelectorAll('#dresscode .gallery-item').forEach((item) => {
+              const img = item.querySelector('img');
+              if (img && !item.dataset.bound) {
+                item.addEventListener('click', function() {
+                  window.open(img.src, '_blank');
+                });
+                item.style.cursor = 'pointer';
+                item.dataset.bound = '1';
+              }
+            });
+          }
+        };
+      })(window.showPage);
+    </script>
+  </body>
+</html>
