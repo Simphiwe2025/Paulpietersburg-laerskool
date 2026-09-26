@@ -1,1 +1,0 @@
-# Paulpietersburg-laerskool
